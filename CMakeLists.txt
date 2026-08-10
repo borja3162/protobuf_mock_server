@@ -57,8 +57,6 @@ target_include_directories(serialization_core
 target_link_libraries(serialization_core
     PRIVATE
         protobuf::libprotobuf
-        absl::log
-        absl::log_internal_check_op
         absl::strings
 )
 
