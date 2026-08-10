@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package serverMessages;
+
+
+message Ping {
+    uint64 time_ms = 1;
+}
+
+
+
+message Alert {
+    int64 time_ms = 1;
+
+    enum AlertType {
+    DEFAULT = 0;
+    OK = 1;
+    SEND_FAILED = 2;
+    PING_RECEIVED = 3;
+    TEXT_RECEIVED = 4;
+
+    }
+
+    AlertType type = 2;
+}

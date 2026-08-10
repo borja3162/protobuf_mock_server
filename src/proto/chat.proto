@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+
+
+package chatMessages;
+
+
+message TextMessage{
+    int64 time_ms = 1;
+    string name = 2;
+    string text = 3;
+}
