@@ -2,6 +2,10 @@ name: C++ CI
 
 on:
   push:
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'img/**'
     branches:
       - main
       - master
