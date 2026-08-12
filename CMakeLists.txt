@@ -1,9 +1,35 @@
+
+
+
 cmake_minimum_required(VERSION 3.20)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(serialization)
 
 
 enable_testing()
+
+
+
+option(SERIALIZATION_EXTRA_ABSL
+    "Link additional Abseil libraries required by some environments"
+    OFF
+)
+
+set(SERIALIZATION_ABSL_LIBS)
+ list(APPEND SERIALIZATION_ABSL_LIBS
+        absl::strings
+    )
+if (SERIALIZATION_EXTRA_ABSL)
+    list(APPEND SERIALIZATION_ABSL_LIBS
+        absl::log
+        absl::log_internal_check_op
+    )
+endif()
+
+
 
 
 
@@ -13,6 +39,14 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/app)
 
 find_package(absl REQUIRED) #dependency for protobuf
 find_package(Protobuf REQUIRED)
+
+
+
+
+
+
+
+
 
 set(PROTO_FILES
     src/proto/server.proto
@@ -57,7 +91,10 @@ target_include_directories(serialization_core
 target_link_libraries(serialization_core
     PRIVATE
         protobuf::libprotobuf
-        absl::strings
+        ${SERIALIZATION_ABSL_LIBS}
+
+
+
 )
 
 
@@ -95,7 +132,11 @@ target_include_directories(serialization PRIVATE
 target_link_libraries(serialization
 	PRIVATE
     protobuf::libprotobuf
-    absl::strings
+        ${SERIALIZATION_ABSL_LIBS}
+
+
+
+	
 )
 
 
