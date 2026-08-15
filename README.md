@@ -27,7 +27,7 @@ In this model, the client owns a single connection object, and the connection ha
 #### Simplified client - server network model used in app
 
 <p align="center">
-  <img src="img/abc.png" alt="Architecture", width="880" >
+  <img src="img/archNetworkSimple.png" alt="Simplified network", width="440" >
 </p>
 
 Ideally, serialization and deserialization would be independent from connection and server, and they would happen at both sides of some “Transport” layer, with the possibility of organizing  connection and serialization/deserialization in different ways.
@@ -36,7 +36,7 @@ Ideally, serialization and deserialization would be independent from connection 
 #### More general - server network model 
 
 <p align="center">
-  <img src="img/abc.png" alt="Architecture", width="880" >
+  <img src="img/archNetwork.png" alt="more general network", width="740" >
 </p>
 
 
@@ -44,7 +44,7 @@ Ideally, serialization and deserialization would be independent from connection 
 ## Folder structure and compilation:
 
 <p align="center">
-  <img src="img/abc.png" alt="Architecture", width="880" >
+  <img src="img/foldersCompile.png" alt="Folder structure", width="270" >
 </p>
 
 
@@ -71,7 +71,7 @@ Requirements (versions in which the original project was compiled):
 
 Steps to compile:
 - Clone the repository or download the project files.
-- The main CMakeLists.txt file has a flag called SERIALIZATION_EXTRA_ABSL. Depending on the environment and how protobuf and absl were installed, it may have to be changed from OFF to ON. ( build step later will complain about undefined reference to absl)
+- The main CMakeLists.txt file has a flag called **SERIALIZATION_EXTRA_ABSL**. Depending on the environment and how protobuf and absl were installed, it may have to be changed from OFF to ON. ( build step later will complain about undefined reference to absl)
 - Open the terminal used to compile and change directory to the project directory. Then run the instructions
 ```
    cmake -S . -B build
@@ -82,7 +82,7 @@ Steps to compile:
 
 ## Results:
 
-Results are split into two parts, tests and app execution.
+Results are split into two parts, **tests** and **app execution**.
 
 The testing and CI succeeded. In order, the following images show the outputs of :
 - ctest 
@@ -90,20 +90,20 @@ The testing and CI succeeded. In order, the following images show the outputs of
 - CI workflow
 
 <p align="center">
-  <img src="img/abc.png" alt="Architecture", width="880" >
+  <img src="img/test1.png" alt="Testing 1", width="450" >
 </p>
 <p align="center">
-  <img src="img/abc.png" alt="Architecture", width="880" >
+  <img src="img/test.png" alt="Testing 2", width="450" >
 </p>
 <p align="center">
-  <img src="img/abc.png" alt="Architecture", width="880" >
+  <img src="img/output_ci.png" alt="CI results", width="600" >
 </p>
 
 
-serialization.exe shows the flow of the data and messages in a simple example. Here is part of its output
+After executing **serialization.exe**, the terminal shows through prints the flow of the data and messages in a simple example. Here is part of its output
 
 <p align="center">
-  <img src="img/abc.png" alt="Architecture", width="880" >
+  <img src="img/output_app.png" alt=" App output", width="500" >
 </p>
 
 
