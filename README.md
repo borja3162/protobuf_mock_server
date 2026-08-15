@@ -43,8 +43,8 @@ Ideally, serialization and deserialization would be independent from connection 
 
 ## Folder structure and compilation:
 
-<p align="center">
-  <img src="img/foldersCompile.png" alt="Folder structure", width="270" >
+<p align="left">
+  <img src="img/foldersCompile.png" alt="Folder structure", width="115" >
 </p>
 
 
@@ -89,25 +89,25 @@ The testing and CI succeeded. In order, the following images show the outputs of
 - serialization_testing.exe direct output
 - CI workflow
 
-<p align="center">
-  <img src="img/test1.png" alt="Testing 1", width="450" >
+<p align="left">
+  <img src="img/test1.png" alt="Testing 1", width="420" >
 </p>
-<p align="center">
-  <img src="img/test.png" alt="Testing 2", width="450" >
+<p align="left">
+  <img src="img/test2.png" alt="Testing 2", width="420" >
 </p>
-<p align="center">
-  <img src="img/output_ci.png" alt="CI results", width="600" >
+<p align="left">
+  <img src="img/output_ci.png" alt="CI results", width="420" >
 </p>
 
 
 After executing **serialization.exe**, the terminal shows through prints the flow of the data and messages in a simple example. Here is part of its output
 
 <p align="center">
-  <img src="img/output_app.png" alt=" App output", width="500" >
+  <img src="img/output_app.png" alt=" App output" width="400" >
 </p>
 
 
-##Limitations 
+## Limitations :
 
 Due to the objectives and scope of the project, there are many limitations, the most important ones related to networking and the simplified model the app uses. Besides the conceptual simplifications, a real client-server interaction should probably involve async programming.
 
