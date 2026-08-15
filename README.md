@@ -23,21 +23,24 @@ In the code, There are three main classes to model the network and exchange of d
 In this model, the client owns a single connection object, and the connection has access to the server . This makes the relationship between client and server  asymmetrical.
 
 
-
-#### Simplified client - server network model used in app
-
+ 
 <p align="center">
   <img src="img/archNetworkSimple.png" alt="Simplified network", width="440" >
+   <br>
+  <strong> Simplified client - server network model used in app </strong>
 </p>
 
 Ideally, serialization and deserialization would be independent from connection and server, and they would happen at both sides of some “Transport” layer, with the possibility of organizing  connection and serialization/deserialization in different ways.
 
 
-#### More general - server network model 
+
 
 <p align="center">
   <img src="img/archNetwork.png" alt="more general network", width="740" >
+   <br>
+  <strong> More general - server network model </strong>
 </p>
+  
 
 
 
